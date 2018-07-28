@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, abort, flash, redirect
+from flask import Flask, render_template, session, request, abort, flash, redirect, url_for
 app = Flask(__name__)
 import os
 
@@ -9,15 +9,32 @@ def home():
 	if not session.get('logged_in'):
 		return render_template('login.html', author = author, name=name)
 	else:
-		return "Hello there!"
+		return 'Hello There'
+
+@app.route('/hero', methods=['GET','POST'])
+def choose():
+	if request.method == "GET":
+		return render_template('hero.html')
+	else:
+		if 'donater' in request.form :
+			'''redirect to post donation'''
+			return "Thank you for donation"
+		elif 'nonProfiter' in request.form:
+			return "Requesting a donation"
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
         session['logged_in'] = True
+	return redirect(url_for('choose'))
     else:
         flash('wrong password!')
     return home()
+
+@app.route('/SignUp', methods=['GET', 'POST'])
+def signupUser():
+	print 'here'
+	return render_template('signup.html')
 
 @app.route("/logout")
 def logout():
