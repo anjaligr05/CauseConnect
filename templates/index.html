@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../styles/index.css" />
-
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,7 +32,12 @@
   </nav>
   <!-- <h1 style="text-align: center; font-size: 48px ">Don8</h1> -->
   <img class="img-circle" src="/images/hedgehog.jpg" id="home-image">
-  <h2 style="text-align: center;">Types of Donations can include: Food, Clothing, Toiletries, Rides, Money, and Your Time</h2>
+  <!-- <h2 style="text-align: center;">Types of Donations can include: Food, Clothing, Toiletries, Rides, Money, and Your Time</h2> -->
+  <h2 style="text-align: center;">Types of Donations can include:
+    <span id="donationType">Food</span>
+  </h2>
+  <img src="https://images.pexels.com/photos/460823/pexels-photo-460823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    style="height: 150px; width: 200px; display:block;margin:20px auto;" id="donationImg" />
   <!-- <form action="/home " method="POST ">
     <div class="home ">
       <div class="login-screen ">
@@ -74,6 +80,19 @@
   <div id="feed">
 
   </div>
+  <script>
+    var dogImages = ["https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350", "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "https://images.pexels.com/photos/460823/pexels-photo-460823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350", "https://images.pexels.com/photos/59523/pexels-photo-59523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350"];
+    var donationType = ["Food", "Items", "Rides", "Money", "Your Time"];
+    var count = 0;
+    setInterval(function () {
+      $("span").text(donationType[count])
+      $("#donationImg").attr("src", dogImages[count]);
+      count++
+      if (count >= donationType.length) {
+        count = 0;
+      }
+    }, 3000)
+  </script>
 </body>
 
 </html>
