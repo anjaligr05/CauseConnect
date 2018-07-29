@@ -1,36 +1,51 @@
-<link rel="stylesheet" href="/static/style.css" type="text/css">
-{% block body %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Don8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+
+
+<!-- {% block body %}
 {% if session['logged_in'] %}
 <p>You're logged in already!</p>
-{% else %}
- 
- 
+{% else %} -->
+
+
 <form action="/login" method="POST">
     <div class="Login">
         <div class="login-screen">
             <div class="app-title">
-                <h1>CauseConnect Login</h1>
+                <h1>Don8 Login</h1>
             </div>
- 
+
             <div class="login-form">
                 <div class="control-group">
-                <input type="text" class="login-field" value="" placeholder="username" name="username">
-                <label class="login-field-icon fui-user" for="login-name"></label>
+                    <input type="text" class="login-field" value="" placeholder="username" name="username">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
                 </div>
- 
+
                 <div class="control-group">
-                <input type="password" class="login-field" value="" placeholder="password" name="password">
-                <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    <input type="password" class="login-field" value="" placeholder="password" name="password">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
                 </div>
- 
-                <input type="submit" name="login" value="Log in" class="btn btn-primary btn-large btn-block" style="margin-bottom:10px">
-		<input type="submit" name="signUp" value="Sign up" class="btn btn-primary btn-large btn-block" >
+
+                <input type="submit" name="login" value="Log in" class="btn btn-success btn-large btn-block" style="margin-bottom:10px">
+                <input type="submit" name="signUp" value="Sign up" class="btn btn-success btn-large btn-block">
 
                 <br>
             </div>
         </div>
     </div>
 </form>
- 
+<!--  
 {% endif %}
-{% endblock %}
+{% endblock %} -->
