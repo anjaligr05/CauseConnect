@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  href="/static/hero.css">
+  </head>
+
+  <body>
+
+  <div class = "landingWrapper">
+   <div id="logo">
+          <img src="{{url_for('static', filename='/hedgehog.jpg')}}" alt="hedgehog">
+    </div> 
+    <div id = "mission">
+    </div>
+
+    <div class= "choose"> 
+    <form method="post" enctype="multipart/form-data" action="">
+        <input type="submit" name="donater" value = "I want to donate" id = "donate">
+        <input type="submit" name="nonProfiter" value = "I am a Non-Profit" id = "org">     
+    </form>
+    </div>
+
+
+  </div>
+
+  </body>
+</html>
