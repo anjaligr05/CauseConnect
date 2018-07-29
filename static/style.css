@@ -8,7 +8,6 @@
 body {
   font-family: Arial;
   background-color: #5cb85c;
-  padding: 50px;
 }
 .login {
   margin: 20px auto;
@@ -17,7 +16,7 @@ body {
 .login-screen {
   background-color: #fff;
   padding: 20px;
-  width: 300px;
+  width: 400px;
   margin: auto;
   border-radius: 5px;
 }
@@ -85,4 +84,8 @@ h1 {
   text-align: center;
   color: green;
   font-weight: bold;
+}
+
+form {
+  margin-top: 50px;
 }
