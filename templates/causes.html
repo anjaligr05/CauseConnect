@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/causes.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="causes">
+            <h2 class="causes-header"> CAUSES </h2>
+            <!-- <div class="causes-center" style="border:2px solid red;">
+                <div class="list-group">
+                    <div href="#" class="cause women">
+                        <div class="d-flex w-100 justify-content-between">
+                            <label class="cause-image-header"> WOMEN'S HEALTH  </label>
+                        </div>
+                    </div>
+                    <div href="#" class="cause hunger">
+                        <label class="cause-image-header"> HUNGER </label>
+                    </div>
+                    <div href="#" class="cause education">
+                        <div class="d-flex w-100 justify-content-between">
+                                <label class="cause-image-header"> EDUCATION </label>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="main-center ">
+                <div class="cause women">
+                    <input type="checkbox"/>
+                </div>
+                <div class="cause hunger">
+                    <input type="checkbox"/>
+                </div>
+                <div class="cause education">
+                    <input type="checkbox"/>
+                </div>
+            </div>
+
+            <div class="main-center ">
+                <div class="cause recovery"></div>
+                <div class="cause literacy"></div>
+                <div class="cause equity"></div>
+            </div>
+
+            <div class="main-center ">
+                <div class="cause housing"></div>
+                <div class="cause workforce"></div>
+                <div class="cause animal"></div>
+            </div>
+
+            <div class="main-center ">
+                <div class="cause environment"></div>
+                <div class="cause literacy"></div>
+                <div class="cause equity"></div>
+            </div>
+        </div>
+    </div>
+<script>
+   
+    $(".cause").click(function() {
+        var check = false;
+        $(this).find('input:checkbox').attr('checked', function(){
+            return !check
+        });
+  
+    });
+
+</script>
+</body>
+
+</html>
