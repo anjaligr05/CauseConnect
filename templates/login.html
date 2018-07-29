@@ -39,6 +39,9 @@
 <form action="/login" method="POST">
     <div class="Login">
         <div class="login-screen">
+            <i>
+                <h5 style="color: green"></h5>
+            </i>
             <div class="app-title">
                 <h1>
                     <i>Don8 Login</i>
@@ -56,14 +59,24 @@
                     <label class="login-field-icon fui-lock" for="login-pass"></label>
                 </div>
 
-                <input type="submit" name="login" value="Log in" class="btn btn-success btn-large btn-block" style="margin-bottom:10px">
-                <input type="submit" name="signUp" value="Sign up" class="btn btn-success btn-large btn-block">
+                <input type="submit" name="login" value="Log in" class="btn btn-success btn-large btn-block">
+                <!-- <input type="submit" name="signUp" value="Sign up" class="btn btn-success btn-large btn-block"> -->
 
                 <br>
             </div>
         </div>
     </div>
 </form>
+<script>
+    var quotes = ["When you learn, teach. When you get, give. - Maya Angelou",
+        "Be the change you wish to see in the world. - Gandhi",
+        "The heart that gives, gathers. - Tao Te Ching",
+        "No one has ever become poor by giving. - Ann Frank"
+    ];
+
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    $("h5").text(randomQuote).css('text-align', 'center');
+</script>
 <!--  
 {% endif %}
 {% endblock %} -->
