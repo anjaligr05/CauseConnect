@@ -4,6 +4,7 @@
   display: block;
   margin: auto;
   border: 2px solid#ccc;
+  background: white;
   padding: 50px;
 }
 
@@ -16,5 +17,12 @@
 .btn {
   font-size: 26px;
   padding: 20px;
+  width: 100%;
+}
+
+#home-image {
+  display: block;
+  margin-top: 30px;
+  height: 200px;
   width: 100%;
 }

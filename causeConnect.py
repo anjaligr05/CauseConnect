@@ -1,4 +1,7 @@
 from flask import Flask, render_template, session, request, abort, flash, redirect, url_for
+from sqlalchemy.orm import sessionmaker
+from tabledef import *
+engine = create_engine('sqlite:///tutorial.db', echo=True)
 app = Flask(__name__)
 import os
 
@@ -6,10 +9,7 @@ import os
 def home():
 	author = "me"
 	name = "You"
-	if not session.get('logged_in'):
-		return render_template('login.html', author = author, name=name)
-	else:
-		return 'Hello There'
+	return render_template('login.html', author = author, name=name)
 
 @app.route('/hero', methods=['GET','POST'])
 def choose():
@@ -27,17 +27,20 @@ def do_admin_login():
     if 'signUp' in request.form:
 	return redirect(url_for('signUp'))
     elif 'login' in request.form:
-    	if request.form['password'] == 'password' and request.form['username'] == 'admin':
-        	session['logged_in'] = True
+	POST_USERNAME = str(request.form['username'])
+	POST_PASSWORD = str(request.form['password'])
+	Session = sessionmaker(bind=engine)
+    	s = Session()
+    	query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]) )
+    	result = query.first()
+    	if result:
 		return redirect(url_for('choose'))
-    else:
-        flash('wrong password!')
+    	else:
+        	flash('wrong password!')
     return home()
 
 @app.route('/SignUp', methods=['GET', 'POST'])
 def signUp():
-	print 'in here'
-	print request.form
 	return render_template('SignUp.html')
 
 @app.route("/logout")

@@ -1,0 +1,44 @@
+.landingWrapper{
+  width: 500px;
+  height: 500px;
+  display: block;
+  vertical-align: middle;
+  padding-top:8%;
+  margin-left:auto;
+  margin-right:auto;
+}
+img{
+  border-radius: 50%;
+  width:200px;
+}
+#logo{
+  width: 200px;
+  height: 100px;
+  margin-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#mission{
+  width: 450px;
+  height:100px;
+  background-color: purple;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.choose > form{
+  width:450px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+#donate, #org{
+  border: 1px solid #000;
+    margin:2px;
+    width: 200px;
+}
