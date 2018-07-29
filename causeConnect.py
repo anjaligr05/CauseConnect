@@ -22,19 +22,23 @@ def choose():
 		elif 'nonProfiter' in request.form:
 			return "Requesting a donation"
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def do_admin_login():
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
-        session['logged_in'] = True
-	return redirect(url_for('choose'))
+    if 'signUp' in request.form:
+	return redirect(url_for('signUp'))
+    elif 'login' in request.form:
+    	if request.form['password'] == 'password' and request.form['username'] == 'admin':
+        	session['logged_in'] = True
+		return redirect(url_for('choose'))
     else:
         flash('wrong password!')
     return home()
 
 @app.route('/SignUp', methods=['GET', 'POST'])
-def signupUser():
-	print 'here'
-	return render_template('signup.html')
+def signUp():
+	print 'in here'
+	print request.form
+	return render_template('SignUp.html')
 
 @app.route("/logout")
 def logout():
