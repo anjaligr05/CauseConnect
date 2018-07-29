@@ -12,7 +12,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-image: url('https://images.pexels.com/photos/255527/pexels-photo-255527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350'); background-size: 100% 700px;background-repeat: no-repeat">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -31,20 +31,38 @@
     </div>
   </nav>
   <!-- <h1 style="text-align: center; font-size: 48px ">Don8</h1> -->
-  <img class="img-circle" src="/images/hedgehog.jpg" id="home-image">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-xs-4">
+
+      </div>
+      <div class="col-xs-4">
+        <img src="/images/Logo.png" id="home-image">
+      </div>
+      <div class="col-xs-4">
+
+      </div>
+      <p style="text-align:center; margin-top: 250px; font-size: 36px;">
+        <i>Don8 is all about giving a hand up to those in need.</i>
+      </p>
+    </div>
+
+  </div>
+
   <!-- <h2 style="text-align: center;">Types of Donations can include: Food, Clothing, Toiletries, Rides, Money, and Your Time</h2> -->
-  <div class="home ">
+
+  <div class="home" style="margin-top: 600px">
     <div class="login-screen ">
       <div class="login-form row ">
-        <div class="col-xs-5 ">
+        <div class="col-xs-4">
           <a href="donate.html">
             <button class="btn btn-primary">
-              I have something to donate
+              I want to donate
             </button>
           </a>
         </div>
-        <div class="col-xs-2 "></div>
-        <div class="col-xs-5 ">
+        <div class="col-xs-4 "></div>
+        <div class="col-xs-4 ">
           <a href="request.html">
             <button class="btn btn-primary">
               I have a need
@@ -55,11 +73,12 @@
       </div>
     </div>
   </div>
-  <h2 style="text-align: center;">Types of Donations can include:
-    <!-- <span id="donationType">Food</span> -->
-  </h2>
-  <img src="/images/food.jpg" style="height: 150px; width: 200px; display:block;margin:20px auto;" id="donationImg" />
-  <!-- <form action="/home " method="POST ">
+  <div>
+    <h2 style="text-align: center;">Types of Donations can include:
+      <!-- <span id="donationType">Food</span> -->
+    </h2>
+    <img src="/images/food.jpg" style="height: 170px; width: 250px; display:block;margin:20px auto;" id="donationImg" />
+    <!-- <form action="/home " method="POST ">
     <div class="home ">
       <div class="login-screen ">
         <div class="login-form row ">
@@ -76,19 +95,20 @@
     </div>
   </form> -->
 
-  <h3 style="text-align: center">Recent Activity:</h3>
-  <div id="feed">
+    <h3 style="text-align: center">Recent Activity:</h3>
+    <div id="feed">
 
+    </div>
   </div>
   <script>
-    var dogImages = ["/images/food.jpg", "/images/clothes.jpg", "https://images.pexels.com/photos/460823/pexels-photo-460823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350", "https://images.pexels.com/photos/59523/pexels-photo-59523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350"];
+    var images = ["/images/food.jpg", "/images/clothing.jpg", "/images/rides.jpg", "/images/volunteers.jpg", "/images/training.jpg", "/images/money.jpg"];
     var donationType = ["Food", "Items", "Rides", "Money", "Your Time"];
     var count = 0;
     setInterval(function () {
       // $("span").text(donationType[count])
-      $("#donationImg").attr("src", dogImages[count]);
+      $("#donationImg").attr("src", images[count]);
       count++
-      if (count >= donationType.length) {
+      if (count >= images.length) {
         count = 0;
       }
     }, 3000)
