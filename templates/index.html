@@ -108,9 +108,12 @@
       </div>
 
       <div id="All" class="tabcontent">
-          <h3>All</h3>
-          <p>X donated Y to ABC Org</p>
-        </div>
+        <h3>All</h3>
+        <p>X donated Y to ABC Org</p>
+        <ul id="dummyData">
+
+        </ul>
+      </div>
 
       <div id="Food" class="tabcontent">
         <h3>Food</h3>
@@ -169,6 +172,61 @@
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAs3XrxNN_-VIS3npzSrl8r198jkEPw_Aw",
+      authDomain: "don8-1f38e.firebaseapp.com",
+      databaseURL: "https://don8-1f38e.firebaseio.com",
+      projectId: "don8-1f38e",
+      storageBucket: "",
+      messagingSenderId: "305536070518"
+    };
+    firebase.initializeApp(config);
+
+    function writeUserData(userId, name, email, posting) {
+      firebase.database().ref('users/' + userId).set({
+        username: name,
+        email: email,
+        posting: posting
+      });
+    }
+
+    // writeUserData(1, "marc", "mcop@aol.com", "donating some food to ABC org");
+    // writeUserData(2, "shajia", "shajia@aol.com", "donating some clothes to ABC org");
+    // writeUserData(3, "renee", "renee@aol.com", "donating money");
+    // writeUserData(5, "anjali", "anjali@aol.com", "donating time to train people");
+
+    var data = firebase.database().ref('users/');
+    var data2;
+    data.on('value', function (snapshot) {
+      // return snapshot.val();
+      // console.log(snapshot.val())
+      data2 = snapshot.val()
+      console.log(data2)
+    });
+
+    setTimeout(function () {
+      var posts = Object.values(data2);
+      console.log(posts)
+      var postings = posts.map(data => {
+        return data.username + " is " + data.posting
+      })
+      console.log(data2)
+      // $("#dummyData").map(postings, function (i) {
+      //   return "<li>" + postings[i] + "</li>";
+      // })
+      postings.forEach(post => {
+        $("#dummyData").append("<li>" + post + "</li>")
+      })
+
+    }, 1000)
+
+
+
+
   </script>
 </body>
 
