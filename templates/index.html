@@ -109,7 +109,6 @@
 
       <div id="All" class="tabcontent">
         <h3>All</h3>
-        <p>X donated Y to ABC Org</p>
         <ul id="dummyData">
 
         </ul>
@@ -214,6 +213,7 @@
       var postings = posts.map(data => {
         return data.username + " is " + data.posting
       })
+      postings.reverse()
       console.log(data2)
       // $("#dummyData").map(postings, function (i) {
       //   return "<li>" + postings[i] + "</li>";
