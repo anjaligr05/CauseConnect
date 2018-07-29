@@ -99,8 +99,8 @@
     <h3 style="text-align: center; color:green; font-weight: bold;  margin-top: 80px;">RECENT ACTIVITY:</h3>
     <div id="feed" style="color:green;">
       <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'All')">All</button>
-        <button class="tablinks" onclick="openTab(event, 'Food')" id="defaultOpen">Food</button>
+        <button class="tablinks" onclick="openTab(event, 'All')" id="defaultOpen">All</button>
+        <button class="tablinks" onclick="openTab(event, 'Food')">Food</button>
         <button class="tablinks" onclick="openTab(event, 'Items')">Items</button>
         <button class="tablinks" onclick="openTab(event, 'Rides')">Rides</button>
         <button class="tablinks" onclick="openTab(event, 'Money')">Money</button>
@@ -116,27 +116,46 @@
 
       <div id="Food" class="tabcontent">
         <h3>Food</h3>
-        <p>X donated Y to ABC Org</p>
+        <ul>
+          <li>Anjali donated food to ABC Org</li>
+          <li>John donated groceries to ABC Org</li>
+          <li>St Anthony requested fresh fruits</li>
+          <li> Sara requested dinner</li>
+        </ul>
+
       </div>
 
       <div id="Items" class="tabcontent">
         <h3>Items</h3>
-        <p>X donated Y to ABC Org</p>
+        <ul>
+          <li>Renne donated clothes to XYZ Org</li>
+          <li>James donated old laptops to ABC Org</li>
+          <li>St Anthony requested volunteer time</li>
+          <li> Sara requested  earphones</li>
+        </ul>
       </div>
 
       <div id="Rides" class="tabcontent">
         <h3>Rides</h3>
-        <p>X volunteered to give Y a ride</p>
+        <ul>
+          <li>Renne gave ride to James</li>
+          <li>James requested a ride to the Bay Area</li>
+        </ul>
       </div>
 
       <div id="Money" class="tabcontent">
         <h3>Money</h3>
-        <p>X volunteered to give Y a ride</p>
+        <ul>
+          <li>Jackson requested money for clothes</li>
+          <li>Anjali donated $100 to  GHI org</li>
+        </ul>
       </div>
 
       <div id="Time" class="tabcontent">
         <h3>Time</h3>
-        <p>X volunteered to give Y a ride</p>
+        <ul>
+          <li>St Anthony requested time for volunteering</li>
+        </ul>
       </div>
     </div>
   </div>
