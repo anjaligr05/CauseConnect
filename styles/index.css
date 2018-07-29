@@ -1,0 +1,20 @@
+#feed {
+  height: 500px;
+  width: 80%;
+  display: block;
+  margin: auto;
+  border: 2px solid#ccc;
+  padding: 50px;
+}
+
+.login-form {
+  display: block;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.btn {
+  font-size: 26px;
+  padding: 20px;
+  width: 100%;
+}
