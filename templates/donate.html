@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/styles/donate.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,46 +36,80 @@
     </nav>
     <div class="signUpPage">
 
-        <form method="POST" class="signUpForm">
-            <h2 class="signUpHeader"> What would you like to donate?</h2>
+        <!-- <form method="POST" class="signUpForm"> -->
+        <h2 class="signUpHeader"> What would you like to donate?</h2>
 
-            <div class="main">
+        <div class="main">
 
-                <div class="form-row">
-                    <div class="form-group col-md-12 title">
-                        <label for="inputEmail4">Title</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Title">
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-12 title">
+                    <label for="inputEmail4">Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Title">
                 </div>
+            </div>
 
 
-                <div class="form-row description">
-                    <div class="form-group col-md-12 title">
-                        <label for="inputEmail4">Description</label>
-                        <textarea style="width:100%" rows="10"></textarea>
-                    </div>
+            <div class="form-row description">
+                <div class="form-group col-md-12 title">
+                    <label for="inputEmail4">Description</label>
+                    <textarea id="description" style="width:100%" rows="10"></textarea>
                 </div>
+            </div>
 
-                <div class=" form-row username">
-                    <div class="form-group col-md-6 ">
-                        <label for="inputEmail4 ">User Name</label>
-                        <input type="email " class="form-control " id="inputEmail4 " placeholder="User Name ">
-                    </div>
-                    <div class="form-group col-md-6 zipcode">
-                        <label for="inputPassword4 ">Zip Code</label>
-                        <input type="password " class="form-control " id="inputPassword4 " placeholder="Zip Code ">
-                    </div>
+            <div class=" form-row username">
+                <div class="form-group col-md-6 ">
+                    <label for="inputEmail4 ">User Name</label>
+                    <input type="email " class="form-control " id="username" placeholder="User Name ">
                 </div>
+                <div class="form-group col-md-6 zipcode">
+                    <label for="inputPassword4 ">Zip Code</label>
+                    <input type="password " class="form-control " id="zip" placeholder="Zip Code ">
+                </div>
+            </div>
 
-                <div class="row signUpFooter ">
-                    <div class="col-md-4 "></div>
-                    <div class="col-md-4 ">
-                        <button type="submit " class="btn btn-success btn-block">Submit Request</button>
-                    </div>
-                    <div class="col-md-4 "></div>
+            <div class="row signUpFooter ">
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 ">
+                    <button id="submitRequest" type="submit " class="btn btn-success btn-block">Submit Request</button>
                 </div>
-        </form>
+                <div class="col-md-4 "></div>
+            </div>
+            <!-- </form> -->
         </div>
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyAs3XrxNN_-VIS3npzSrl8r198jkEPw_Aw",
+                authDomain: "don8-1f38e.firebaseapp.com",
+                databaseURL: "https://don8-1f38e.firebaseio.com",
+                projectId: "don8-1f38e",
+                storageBucket: "",
+                messagingSenderId: "305536070518"
+            };
+            firebase.initializeApp(config);
+
+            function writeUserData(userId, name, email, posting) {
+                firebase.database().ref('users/' + userId).set({
+                    username: name,
+                    email: email,
+                    posting: "posted " + posting
+                });
+            }
+
+            $("#submitRequest").click(function () {
+                var title = $("#title").val();
+                var email = $("#username").val()
+                var id = $("#zip").val();
+                var name = $("#username").val();
+                console.log(name, id, title, email)
+                writeUserData(id, name, email, title)
+                setTimeout(function () {
+                    window.location.href = "index.html";
+                }, 200)
+
+            })
+
+        </script>
 </body>
 
 </html>

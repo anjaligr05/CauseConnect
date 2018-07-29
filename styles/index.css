@@ -9,17 +9,20 @@
   margin-bottom: 100px;
 }
 
-.accept{
-  text-shadow:2px 2px  lightgreen;
-  text-align: center;  color:green; font-weight: bold;  margin-top: 80px;
+.accept {
+  text-shadow: 2px 2px lightgreen;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 80px;
 }
 
-.logoHeader{
-  font-family: 'Poppins', sans-serif;
+.logoHeader {
+  font-family: "Poppins", sans-serif;
   color: green;
 }
 
-.gradient{
+.gradient {
   height: 100%;
 }
 
@@ -27,14 +30,14 @@
   display: block;
   width: 80%;
   margin: 50px auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .btn {
   font-size: 26px;
   padding: 20px;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #home-image {
@@ -60,7 +63,7 @@
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Change background color of buttons on hover */
@@ -80,9 +83,14 @@
   border: 1px solid #ccc;
   border-top: none;
   height: 250px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+#All {
+  overflow: scroll;
+  height: 200px;
 }
