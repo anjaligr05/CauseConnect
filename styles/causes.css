@@ -5,6 +5,15 @@ h2{
     font-family: 'Poppins', sans-serif;
 }
 
+/* .main{
+    background: linear-gradient(white, green);
+}
+
+.causes{
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+} */
 .main-center{
     display: flex;
     flex-direction: row;

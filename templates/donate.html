@@ -7,7 +7,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/styles/signUp.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles/donate.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
@@ -17,89 +17,63 @@
     </a> -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Don8</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="signUp.html">Sign Up Today!</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="login.html">Login</a>
-            </li>
-          </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Don8</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="signUp.html">Sign Up Today!</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <div class="signUpPage">
 
         <form method="POST" class="signUpForm">
             <h2 class="signUpHeader"> What would you like to donate?</h2>
 
             <div class="main">
-                    <div class="causes">
-                        <h2 class="causes-header"> What causes are close to your heart? </h2>
-                        <div class="main-center ">
-                            <div class="cause women">
-                                <input type="checkbox" name="women" />
-                                <p class="text"> WOMEN'S ISSUE </p>
-                            </div>
-                            <div class="cause hunger">
-                                <input type="checkbox" name="hunger" />
-                                <p class="text"> FOOD </p>
-                            </div>
-                            <div class="cause education">
-                                <input type="checkbox" name="education" />
-                                <p class="text"> EDUCATION </p>
-                            </div>
-                            <div class="cause housing">
-                                <input type="checkbox" name="housing" />
-                                <p class="text"> HOUSING </p>
-                            </div>
-                        </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12 title">
+                        <label for="inputEmail4">Title</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Title">
+                    </div>
                 </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="inputEmail4">Title</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Title">
-                </div>
-            </div>
-            <label for="inputEmail4">Description</label>
-            <div class="form-row">
-                <!-- <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                </div> -->
 
-                <textarea style="width:100%" rows="10"></textarea>
-            </div>
-            <div class=" form-row ">
-                <div class="form-group col-md-6 ">
-                    <label for="inputEmail4 ">User Name</label>
-                    <input type="email " class="form-control " id="inputEmail4 " placeholder="User Name ">
+                <div class="form-row description">
+                    <div class="form-group col-md-12 title">
+                        <label for="inputEmail4">Description</label>
+                        <textarea style="width:100%" rows="10"></textarea>
+                    </div>
                 </div>
-                <div class="form-group col-md-6 ">
-                    <label for="inputPassword4 ">Zip Code</label>
-                    <input type="password " class="form-control " id="inputPassword4 " placeholder="Zip Code ">
+
+                <div class=" form-row username">
+                    <div class="form-group col-md-6 ">
+                        <label for="inputEmail4 ">User Name</label>
+                        <input type="email " class="form-control " id="inputEmail4 " placeholder="User Name ">
+                    </div>
+                    <div class="form-group col-md-6 zipcode">
+                        <label for="inputPassword4 ">Zip Code</label>
+                        <input type="password " class="form-control " id="inputPassword4 " placeholder="Zip Code ">
+                    </div>
                 </div>
-            </div>
-            <div class="row signUpFooter ">
-                <div class="col-md-4 "></div>
-                <div class="col-md-4 ">
-                    <button type="submit " class="btn btn-success btn-block">Submit Request</button>
+
+                <div class="row signUpFooter ">
+                    <div class="col-md-4 "></div>
+                    <div class="col-md-4 ">
+                        <button type="submit " class="btn btn-success btn-block">Submit Request</button>
+                    </div>
+                    <div class="col-md-4 "></div>
                 </div>
-                <div class="col-md-4 "></div>
-            </div>
         </form>
-    </div>
-
-
+        </div>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 
 .signUpPage{
     width: 75%;
-    height: 500px;
+    height: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,37 @@
     border: 2px solid #CCC;
     padding: 50px;
     border-radius: 10px;
+    background-color: white;
 }
 
 .signUpFooter{
  margin-top: 40px;
   
 }
+
+.gradient{
+    background: linear-gradient(white, green);
+    height: 100%;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+*{
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* button{
+    border: 2px solid rgba(92,184,92, 0.6);
+    width: 120px;
+    height: 30px;
+    background-color: black;
+    color: white;
+} */
+
+/* button:hover{
+    background-color: green;
+} */

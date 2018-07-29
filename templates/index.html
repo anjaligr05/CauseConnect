@@ -97,14 +97,20 @@
   </form> -->
 
     <h3 style="text-align: center; color:green; font-weight: bold;  margin-top: 80px;">RECENT ACTIVITY:</h3>
-    <div id="feed">
+    <div id="feed" style="color:green;">
       <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'All')">All</button>
         <button class="tablinks" onclick="openTab(event, 'Food')" id="defaultOpen">Food</button>
         <button class="tablinks" onclick="openTab(event, 'Items')">Items</button>
         <button class="tablinks" onclick="openTab(event, 'Rides')">Rides</button>
         <button class="tablinks" onclick="openTab(event, 'Money')">Money</button>
         <button class="tablinks" onclick="openTab(event, 'Time')">Time</button>
       </div>
+
+      <div id="All" class="tabcontent">
+          <h3>All</h3>
+          <p>X donated Y to ABC Org</p>
+        </div>
 
       <div id="Food" class="tabcontent">
         <h3>Food</h3>
