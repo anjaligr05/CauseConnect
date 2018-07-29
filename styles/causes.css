@@ -1,45 +1,37 @@
-/* .main{
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-} */
+h2{
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
 
 .main-center{
     display: flex;
-    /* border: 2px solid gold; */
     flex-direction: row;
     flex-wrap: nowrap; 
     justify-content: center;
     margin-bottom: 20px;
 }
-
-/* .causes{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-} */
-
-/* .causes-center{
-    width: 65%;
-    align-self: center;
-} */
-
 .cause{
     width: 200px;
     height: 200px;
-    /* display: inline-block; */
-    /* border:2px solid green; */
     margin-right: 30px;
-    /*text-align: center; */
     background-repeat: no-repeat;
     background-size:contain;
-    /* border:2px solid green; */
+}
+
+.cause .text {
+    visibility:hidden;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px; 
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cause:hover .text {
+    visibility:visible;
 }
 
 .cause input.selected::after {
@@ -55,6 +47,7 @@
 
 .cause-image-header{
     display: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .women{
@@ -93,9 +86,13 @@
 }
 
 .environment{
-    background-image: url('../images/environment.jpg');
+    background-image: url('../images/environemnt.jpg');
+}
+
+.religion{
+    background-image: url('../images/religion.jpg');
 }
 .cause:hover{
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
     background-blend-mode: lighten;
 }

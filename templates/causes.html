@@ -9,73 +9,95 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/causes.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Don8</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="signUp.html">Sign Up Today!</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="main">
         <div class="causes">
-            <h2 class="causes-header"> CAUSES </h2>
-            <!-- <div class="causes-center" style="border:2px solid red;">
-                <div class="list-group">
-                    <div href="#" class="cause women">
-                        <div class="d-flex w-100 justify-content-between">
-                            <label class="cause-image-header"> WOMEN'S HEALTH  </label>
-                        </div>
-                    </div>
-                    <div href="#" class="cause hunger">
-                        <label class="cause-image-header"> HUNGER </label>
-                    </div>
-                    <div href="#" class="cause education">
-                        <div class="d-flex w-100 justify-content-between">
-                                <label class="cause-image-header"> EDUCATION </label>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
+            <h2 class="causes-header"> What causes are close to your heart? </h2>
             <div class="main-center ">
                 <div class="cause women">
-                    <input type="checkbox"/>
+                    <input type="checkbox" name="women" />
+                    <p class="text"> WOMEN'S ISSUE </p>
                 </div>
                 <div class="cause hunger">
-                    <input type="checkbox"/>
+                    <input type="checkbox" name="hunger" />
+                    <p class="text"> FOOD </p>
                 </div>
                 <div class="cause education">
-                    <input type="checkbox"/>
+                    <input type="checkbox" name="education" />
+                    <p class="text"> EDUCATION </p>
+                </div>
+                <div class="cause housing">
+                    <input type="checkbox" name="housing" />
+                    <p class="text"> HOUSING </p>
                 </div>
             </div>
 
             <div class="main-center ">
-                <div class="cause recovery"></div>
-                <div class="cause literacy"></div>
-                <div class="cause equity"></div>
+                <div class="cause recovery">
+                    <input type="checkbox" name="recovery" />
+                    <p class="text"> RECOVERY </p>
+                </div>
+                <div class="cause literacy">
+                    <input type="checkbox" name="literacy" />
+                    <p class="text"> LITERACY </p>
+                </div>
+                <div class="cause equity">
+                    <input type="checkbox" name="equity" />
+                    <p class="text"> EQUITY & DIVERSITY </p>
+                </div>
+                <div class="cause animal">
+                    <input type="checkbox" name="animal" />
+                    <p class="text"> ANIMAL </p>
+                </div>
             </div>
 
-            <div class="main-center ">
-                <div class="cause housing"></div>
-                <div class="cause workforce"></div>
-                <div class="cause animal"></div>
-            </div>
 
             <div class="main-center ">
-                <div class="cause environment"></div>
-                <div class="cause literacy"></div>
-                <div class="cause equity"></div>
+                <div class="cause workforce">
+                    <input type="checkbox" name="workforce" />
+                    <p class="text"> WORKFORCE DEVELOPMENT </p>
+                </div>
+                <div class="cause environment">
+                    <input type="checkbox" name="environment" />
+                    <p class="text"> ENVIRONMENT </p>
+                </div>
+                <div class="cause religion">
+                    <input type="checkbox" name="religion" />
+                    <p class="text"> RELIGION </p>
+                </div>
             </div>
         </div>
     </div>
-<script>
-   
-    $(".cause").click(function() {
-        var check = false;
-        $(this).find('input:checkbox').attr('checked', function(){
-            return !check
-        });
-  
-    });
+    <!-- <script>
+        $(".cause").click(function () {
+            var check = false;
+            $(this).find('input:checkbox').attr('checked', function () {
+                return !check
+            });
 
-</script>
+        });
+    </script> -->
 </body>
 
 </html>

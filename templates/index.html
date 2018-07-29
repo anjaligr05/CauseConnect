@@ -4,19 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Do-n8</title>
+  <title>Don8</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../styles/index.css" />
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body style="background-image: url('https://images.pexels.com/photos/255527/pexels-photo-255527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350'); background-size: 100% 700px;background-repeat: no-repeat">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Do-n8</a>
+        <a class="navbar-brand" href="index.html">Don8</a>
       </div>
       <ul class="nav navbar-nav">
         <li>
@@ -43,7 +44,7 @@
 
       </div>
       <p style="text-align:center; margin-top: 250px; font-size: 36px;">
-        <i>Do-n8 is all about giving a hand up to those in need.</i>
+        <i class="logoHeader">Don8 is all about giving a hand up to those in need.</i>
       </p>
     </div>
 
@@ -73,11 +74,11 @@
       </div>
     </div>
   </div>
-  <div style="background: linear-gradient(white, green)">
-    <h2 style="text-align: center;">Types of Donations can include:
+  <div   class="gradient" style="background: linear-gradient(white, green)">
+    <h2 class="accept">NOW ACCEPTING
       <!-- <span id="donationType">Food</span> -->
     </h2>
-    <img src="/images/food.jpg" style="height: 170px; width: 250px; display:block;margin:20px auto;" id="donationImg" />
+    <img src="/images/food.jpg" style="height: 280px; width: 400px; display:block;margin:20px auto;" id="donationImg" />
     <!-- <form action="/home " method="POST ">
     <div class="home ">
       <div class="login-screen ">
@@ -95,13 +96,46 @@
     </div>
   </form> -->
 
-    <h3 style="text-align: center">Recent Activity:</h3>
+    <h3 style="text-align: center; color:green; font-weight: bold;  margin-top: 80px;">RECENT ACTIVITY:</h3>
     <div id="feed">
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Food')" id="defaultOpen">Food</button>
+        <button class="tablinks" onclick="openTab(event, 'Items')">Items</button>
+        <button class="tablinks" onclick="openTab(event, 'Rides')">Rides</button>
+        <button class="tablinks" onclick="openTab(event, 'Money')">Money</button>
+        <button class="tablinks" onclick="openTab(event, 'Time')">Time</button>
+      </div>
 
+      <div id="Food" class="tabcontent">
+        <h3>Food</h3>
+        <p>X donated Y to ABC Org</p>
+      </div>
+
+      <div id="Items" class="tabcontent">
+        <h3>Items</h3>
+        <p>X donated Y to ABC Org</p>
+      </div>
+
+      <div id="Rides" class="tabcontent">
+        <h3>Rides</h3>
+        <p>X volunteered to give Y a ride</p>
+      </div>
+
+      <div id="Money" class="tabcontent">
+        <h3>Money</h3>
+        <p>X volunteered to give Y a ride</p>
+      </div>
+
+      <div id="Time" class="tabcontent">
+          <h3>Time</h3>
+          <p>X volunteered to give Y a ride</p>
+      </div>
     </div>
   </div>
   <script>
-    var images = ["/images/food.jpg", "/images/clothing.jpg", "/images/rides.jpg", "/images/volunteers.jpg", "/images/training.jpg", "/images/money.jpg"];
+    var images = ["/images/Food-Button.jpg", "/images/clothing.jpg", "/images/rides.jpg", "/images/volunteers.jpg",
+      "/images/training.jpg", "/images/money.jpg"
+    ];
     var donationType = ["Food", "Items", "Rides", "Money", "Your Time"];
     var count = 0;
     setInterval(function () {
@@ -112,6 +146,23 @@
         count = 0;
       }
     }, 3000)
+
+    function openTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
   </script>
 </body>
 
